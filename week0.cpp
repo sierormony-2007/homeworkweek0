@@ -37,8 +37,8 @@ int main(){
     }
     
     cout<<endl<<"After Deletion: ";
-    deleteNumber(a, 2, size);
-    for(int i=0; i<size; i++){
+    deleteNumber(a, 0, size);
+    for(int i=0; i<=size; i++){
         cout<<a[i]<<" ";
     }
 }
