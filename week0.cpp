@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-void insertNumber(int array[], int pos, int val, int size){
+void insertNumber(int array[], int pos, int val, int &size){
     if(pos<0||pos>size){
         cout<<"Error!"<<endl;
         return;
@@ -11,7 +11,7 @@ void insertNumber(int array[], int pos, int val, int size){
     array[pos]=val;
     size++;
 }
-void deleteNumber(int array[], int pos, int& size){
+void deleteNumber(int array[], int pos, int &size){
     if(pos<0||pos>=size){
         cout<<"Error!"<<endl;
         return;
@@ -25,20 +25,20 @@ int main(){
     int a[10]={5,4,3,2,1};
     int size=5;
 
-    cout<<"Original Number: ";
+    cout<<"Original Numbers: ";
     for(int i=0; i<size; i++){
         cout<<a[i]<<" ";
     }
     
     cout<<endl<<"After Insertion: ";
     insertNumber(a, 2, 10, size);
-    for(int i=0; i<=size; i++){
+    for(int i=0; i<size; i++){
         cout<<a[i]<<" ";
     }
     
     cout<<endl<<"After Deletion: ";
-    deleteNumber(a, 0, size);
-    for(int i=0; i<=size; i++){
+    deleteNumber(a, 1, size);
+    for(int i=0; i<size; i++){
         cout<<a[i]<<" ";
     }
 }
